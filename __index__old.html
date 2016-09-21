@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<meta name="theme-color" content="#820469">
+	<meta name="msapplication-navbutton-color" content="#820469">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#820469">
+	
+	<!-- Favicon -->
+	<link rel="icon" sizes="192x192" type="image/png" href="img/favicon.png" />
+
+	<title>VII COBEPI - Congresso dos Betheis do Piauí</title>
+
+</head>
+
+<body>
+	<div id="cobepi-logo">
+		<img src="img/logo_media.png" id="logo" alt="VII COBEPI" />
+	</div>
+	
+	<div id="content">
+		<div class="square">
+			<span class="display" id="days"></span>
+			<div class="smalltext">Dias</div>
+		</div>
+		
+		<div class="square">
+			<span class="display" id="hours"></span>
+			<div class="smalltext">Horas</div>
+		</div>
+		
+		<div class="square">
+			<span class="display" id="mins"></span>
+			<div class="smalltext">Minutos</div>
+		</div>
+		
+		<div class="square">
+			<span class="display" id="secs"></span>
+			<div class="smalltext">Segundos</div>
+		</div>
+	</div>
+</body>
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Page Style -->
+<style>
+	body {
+		background-color: #820469;
+		text-align: center;
+		color: #fff;
+	}
+	
+	#logo {
+		height: auto;
+		width: auto;
+		max-width: 100%;
+	}
+	
+	#cobepi-logo {
+		margin-top: 2em;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#content {
+		width: 100%;
+		margin-top: 3em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 3em;
+		text-align: center;
+	}
+	
+	.square {
+		text-align: center;
+		margin: 0;
+		padding: .3em;
+		border-radius: 3px;
+		background: #00816A;
+		display: inline-block;
+	}
+	
+	.smalltext {
+		font-size: 14px;
+	}
+	
+	.display {
+		text-align: center;
+		padding: 1em;
+		border-radius: 3px;
+		background: #34022a;
+		display: inline-block;
+		font-size: 20px;
+	}
+	
+	@media(min-width: 400px) {
+		.square {
+			padding: 0.7em;
+		}
+		
+		.display {
+			font-size: 24px;
+		}
+		
+		.smalltext {
+			font-size: 16px;
+		}
+	}
+	
+	@media(min-width: 906px) {
+		#content {
+			width: 100%;
+		}
+		
+		.square {
+			margin: 0 5%;
+			padding: 1em;
+		}
+		
+		.display {
+			padding: 1.7em;
+		}
+	}
+	
+	@media(min-width: 1610px) {
+		#content {
+			width: 60%;
+		}
+	}
+</style>
+
+<script type="text/javascript">
+var deadline = "May 10 2016 00:00:00 GMT-03:00";
+
+function getRemainingTime( deadline )
+{
+	var t = Date.parse( deadline ) - Date.parse( new Date() );
+	
+	var secs = Math.floor( ( t / 1000 ) % 60 );
+	var mins = Math.floor( ( t / ( 1000 * 60 ) ) % 60 );
+	var hours = Math.floor( ( t / ( 1000 * 60 * 60 ) ) % 24 );
+	var days = Math.floor( ( t / ( 1000 * 60 * 60 * 24 ) ) );
+	
+	return {
+		'total': t,
+		'days': days,
+		'hours': hours,
+		'mins': mins,
+		'secs': secs
+	};
+}
+
+function updateClock()
+{
+	var t = getRemainingTime( deadline );
+	
+	var daysSpan = document.getElementById( "days" );
+	var hoursSpan = document.getElementById( "hours" );
+	var minsSpan = document.getElementById( "mins" );
+	var secsSpan = document.getElementById( "secs" );
+	
+	daysSpan.innerHTML = ( "0" + t.days ).slice( -2 );
+	hoursSpan.innerHTML = ( "0" + t.hours ).slice( -2 );
+	minsSpan.innerHTML = ( "0" + t.mins ).slice( -2 );
+	secsSpan.innerHTML = ( "0" + t.secs ).slice( -2 );
+	
+	if( t.total <= 0 )
+	{
+		clearInterval( timeInterval );
+	}
+}
+
+var timeInterval = setInterval( updateClock, 1000 );
+updateClock();
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+RewriteBase /
+RewriteEngine On
+
+Header unset ETag
+FileETag None
+
+Header set Cache-Control "public"
+Header unset Last-Modified
+
+# 2 horas
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>
+
+# 1 ano
+<FilesMatch "\.(js|css|png|gif|jpg|woff)$">
+SetOutputFilter DEFLATE
+Header set Cache-Control "max-age=31536000, must-revalidate"
+</FilesMatch>
+
+Options -Indexes

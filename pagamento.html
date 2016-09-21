@@ -1,0 +1,33 @@
+<script src="js/jquery-1.12.3.min.js"></script>
+
+<script type="text/javascript">
+var s = window.location.href.split("?");
+if( s.length == 1 )
+	window.location.href = s[0].split("pagamento.html")[0];
+	
+q = s[1].split( "&" );
+var nome;
+var email;
+
+q.forEach(function( m ){
+	m = m.split( "=" );
+	if( m[0] == null )
+		return;
+		
+	if( m[0] == "nome" )
+		nome = m[1].replace( /%20/g, " " );
+	else if( m[0] == "email" )
+		email = m[1];
+});
+
+$.ajax({
+	method: "GET",
+	url: "scripts/pagar.php",
+	data: {
+		nome: nome,
+		email: email
+	}
+}).success(function( c ){
+	window.location.href = c;
+});
+</script>

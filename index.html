@@ -1,163 +1,507 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<meta name="theme-color" content="#34022a">
+	<meta name="msapplication-navbutton-color" content="#34022a">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#34022a">
+	
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+	<!-- Custom CSS -->
+	<link href="css/grayscale.min.css" rel="stylesheet">
+	
+	<!-- Favicon -->
+	<link rel="icon" sizes="192x192" type="image/png" href="img/favicon.png" />
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<title>VII COBEPI - Congresso dos Betheis do Piauí</title>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                </a>
-            </div>
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top">
+					<i class="fa fa-play-circle"></i>	<span class="light">Início</span>
+				</a>
+			</div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Download</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#bethel03">Bethel #03</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#inscricoes">Inscrições</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#cronograma">Cronograma</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#concurso">Concurso Miss FDJ</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#hospedagem">Hospedagem</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#contato">Contato</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	
+	<!-- Floating counter -->
+	<div class="floating-counter">
+		<div style="display: table-cell; vertical-align: middle;">
+			<span id="counter-span" style="font-size: 24px;">0</span><br />
+			<span style="font-size: 11px;">Filhas inscritas</span>
+		</div>
+	</div>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Grayscale</h1>
-                        <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+	<!-- Intro Header -->
+	<header class="intro">
+		<div class="intro-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<h1 class="brand-heading">VII COBEPI</h1>
+						<p class="intro-text">"E em toda a terra não se acharam mulheres tão formosas como as filhas de Jó; e seu pai lhes deu herança entre seus irmãos." Jó 42:15</p>
+						<a href="#bethel03" class="btn btn-circle page-scroll">
+							<i class="fa fa-angle-double-down animated"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Grayscale</h2>
-                <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-                <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-            </div>
-        </div>
-    </section>
+	<!-- Sobre o Bethel -->
+	<section id="bethel03" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<h2>Bethel #03</h2>
+				
+				<div id="slideshow" style="max-width: 100%; justify-content: center;">
+				</div>
+				
+				<br />
+				
+				<p>Fundado em Dezembro de 2006 e instalado em Janeiro de 2007, o Bethel #03 já está em sua décima nona gestão. Atualmente, contamos com 21 Filhas ativas. Nossas reuniões normalmente acontecem aos domingos, quinzenalmente, no Templo da A.'. R.'. L.'. S.'. Caridade II, localizada na Rua Senador Teodoro Pacheco, no Centro de Teresina-PI. No nosso Bethel, aprendemos diariamente a importância de amar uns aos outros e conviver como uma enorme Família.</p>
+			</div>
+		</div>
+	</section>
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section>
+	<!-- Inscrições -->
+	<section id="inscricoes" class=" container content-section text-center">
+		<div class="row">
+			<h2>Inscrições</h2>
+			<div class="col-md-6">
+				<ul class="nav nav-tabs nav-justified ul-custom">
+					<li class="active nav-custom"><a data-toggle="tab" href="#tab-fdj">FDJ</a></li>
+					<li class="nav-custom"><a data-toggle="tab" href="#tab-dm">Primos</a></li>
+					<li class="nav-custom"><a data-toggle="tab" href="#tab-conselho">Conselho</a></li>
+					<li class="nav-custom"><a data-toggle="tab" href="#tab-abelhinha">Abelhinha</a></li>
+				</ul>
+				
+				<div class="tab-content">
+					<!-- FILHAS DE JÓ -->
+					<div id="tab-fdj" class="tab-pane fade in active">
+						<p>Filha, temos o prazer em receber você para o VII COBEPI. Este ano apresentamos como tema ”União e Amor: Laços Fraternais”. Nossa frase é: “A importância da união e do amor no desenvolvimento dos laços fraternais das Filhas de Jó”. O intuito do VII COBEPI é a maior integração entre as Filhas da Jurisdição. O que você está esperando? Faça já sua inscrição. O valor da inscrição é de R$ 150,00.</p>
+					</div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+					<!-- DEMOLAY -->
+					<div id="tab-dm" class="tab-pane fade">
+						<p>O VII COBEPI trata não só da união de Filhas da Jurisdição, trata também da união de todas as ordens maçônicas e para maçônicas. Visando a melhor integração das instituições, temos o prazer de convidar os primos DeMolays e os primos e primas Apejotistas  a fazerem parte da Cerimônia de Abertura do Congresso dos Bethéis do Piauí. Os mesmos são convidados a também participarem da festa de abertura do congresso pagando uma simbólica taxa de R$ 20,00. Abaixo segue um regulamento de conduta a ser seguido:</p>
 
-    <!-- Map Section -->
-    <div id="map"></div>
+						<p>REGULAMENTO DE CONDUTA</p>
+						<ul class="list text-justify" style="list-style: decimal inside;" >
+							<li>Um DeMolay ou Apejotista devem entrar acompanhados de um MM ou Membro do Conselho Constitutivo do Capítulo ou Assembleia, respectivamente. O responsável deve arcar com o REGULAMENTO DE CONDUTA.</li>
+							<li>É vedado o consumo de bebidas alcoólicas no local do evento.</li>
+							<li>É vedada a saída do local sem prévia autorização de um guardião.</li>
+							<li>É vedada a demonstração afetiva entre (FDJ – DM, FDJ – APJ, DM – APJ, APJ – APJ).</li>
+							<li>Uso obrigatório de paramento oficial na abertura do COBEPI.</li>
+							<li>O participante poderá optar por fantasia ou traje formal durante a festa.</li>
+							<li>O desvio de conduta de ambas as partes, podem acarretar punições ao capítulo ou assembleia, ficando a critério do adulto responsável.</li>
+						</ul>
+					</div>
+					
+					<!-- CONSELHO -->
+					<div id="tab-conselho" class="tab-pane fade">
+						<p>Membro do Conselho, sua presença em nosso congresso é muito importante. A integração completa também depende de você. A seguir segue o formulário de inscrição. O valor da inscrição é de R$ 150,00. Esse valor inclui hospedagem, camisa do congresso, refeições e demais atividades. Venha e traga seu Bethel.</p>
+					</div>
+					
+					<!-- ABELHINHAS -->
+					<div id="tab-abelhinha" class="tab-pane fade">
+						<p>O Clube das Abelhinhas é um programa para meninas de sete à dez anos de idade com objetivo de prepará-las à ingressarem na Ordem das Filhas de Jó Internacional ao completarem os 10 anos. Não existe um Ritual ou reuniões regulares, tudo gira em volta da Iniciação da Abelhinha quando tiver idade suficiente. A cada participante é dado o nome de Abelha ou Abelhinha e a organização é dada o nome de Colmeia.</p>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
-        </div>
-    </footer>
+						<p>O Clube das Abelhinhas tem caráter de PROMOÇÃO da Ordem. Os critérios de elegibilidade são os mesmo exigidos para ser um membro das Filhas de Jó, uma vez que o objetivo da Colmeia é que a Abelhinha inicie na OFDJI.</p>
+						
+						<p>As abelhinhas podem participar das reuniões abertas e as cerimônias de abertura e encerramento do Bethel nas sessões fechadas, e principalmente, nas atividades e eventos promovidos pelo mesmo. Suas reuniões ocorrem em lugares reservados a elas nos mesmos dias e horários das reuniões do Bethel.</p>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+						<p>Assim como no Bethel, a Colmeia é supervisionada por um grupo de adultos que pode ser composto por Membros de Maioridade e membros do próprio Conselho Guardião do Bethel que irão abrigá-las, pois viabilizaria que todos possam participar tanto da reunião da Colmeia quanto do Bethel.</p>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+						<p>A criação deste jovem grupo é um excelente programa tanto para as Filhas, como para as Abelhinhas. Ambas amadurecem muito umas com as outras. As Abelhinhas é um dos caminhos para estruturarmos o futuro de nossa Ordem. </p>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
+						<p>A inscrição a seguir, no valor de R$ 125,00, engloba o preço para a abelhinha. Refeições, acomodações e demais atividades inclusas no pagamento.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<p>Formulário de inscrição para o evento.</p>
+				
+				<form class="form-horizontal" id="form-inscricao">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-2 control-label">Nome</label>
+						<div class="col-sm-9">
+							<input type="text" name="nome" class="form-control" id="inputName" placeholder="Nome Completo" maxlength="60" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputEmail" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+								<span class="input-group-addon">@</span>
+								<input type="email" class="form-control" name="email" id="inputEmail" placeholder="E-mail"  maxlength="50" required>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputPhone" class="col-sm-2 control-label">Telefone</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+								<input type="tel" class="form-control bfh-phone" name="telefone" id="inputPhone" placeholder="Telefone" required>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputOption" class="col-sm-2 control-label">Sou</label>
+						<div class="col-sm-9">
+							<select id="inputOption" name="tipo" class="form-control">
+								<option value="FDJ">Filha de Jó</option>
+								<option value="DM">DeMolay / Apejotista</option>
+								<option value="CONS">Membro(a) do Conselho</option>
+								<option value="ABEL">Abelhinha</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputBethel" id="labelBethel" class="col-sm-2 control-label">Bethel</label>
+						<div class="col-sm-9">
+							<input type="text" name="local" class="form-control" id="inputBethel" placeholder="Bethel" maxlength="30" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputNumero" class="col-sm-2 control-label">Número</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+								<span class="input-group-addon">#</span>
+								<input type="number" name="numero" min="1" max="9999" class="form-control" id="inputNumero" placeholder="Número" required>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group" id="cargoform">
+						<label for="inputCargo" id="labelBethel" class="col-sm-2 control-label">Cargo</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" name="cargo" id="inputCargo" placeholder="Cargo Ocupado" maxlength="30">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputCidade" class="col-sm-2 control-label">Cidade</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" name="cidade" id="inputCidade" placeholder="Cidade" maxlength="30" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputEstado" class="col-sm-2 control-label">Estado</label>
+						<div class="col-sm-9">
+							<select id="inputEstado" name="estado" class="form-control" required>
+								<option value="">Selecione</option>
+								<option value="AC">Acre</option>
+								<option value="AL">Alagoas</option>
+								<option value="AP">Amapá</option>
+								<option value="AM">Amazonas</option>
+								<option value="BA">Bahia</option>
+								<option value="CE">Ceará</option>
+								<option value="DF">Distrito Federal</option>
+								<option value="ES">Espirito Santo</option>
+								<option value="GO">Goiás</option>
+								<option value="MA">Maranhão</option>
+								<option value="MS">Mato Grosso do Sul</option>
+								<option value="MT">Mato Grosso</option>
+								<option value="MG">Minas Gerais</option>
+								<option value="PA">Pará</option>
+								<option value="PB">Paraíba</option>
+								<option value="PR">Paraná</option>
+								<option value="PE">Pernambuco</option>
+								<option value="PI">Piauí</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="RN">Rio Grande do Norte</option>
+								<option value="RS">Rio Grande do Sul</option>
+								<option value="RO">Rondônia</option>
+								<option value="RR">Roraima</option>
+								<option value="SC">Santa Catarina</option>
+								<option value="SP">São Paulo</option>
+								<option value="SE">Sergipe</option>
+								<option value="TO">Tocantins</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group" id="camisaform">
+						<label for="inputCamisa" class="col-sm-2 control-label">Camisa</label>
+						<div class="col-sm-9">
+							<select id="inputCamisa" name="camisa" class="form-control" required>
+								<option value="">Tamanho da Camisa</option>
+								<option value="PP">PP</option>
+								<option value="P">P</option>
+								<option value="M">M</option>
+								<option value="G">G</option>
+								<option value="GG">GG</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group" id="form-success" style="display: none;">
+						<div class="col-sm-9 col-sm-offset-2 btn">
+							<label id="label-success"></label>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-10">
+							<button type="reset" class="btn btn-default">Limpar</button>
+							<button type="submit" class="btn btn-default">Inscrever</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Cronograma do Evento -->
+	<section id="cronograma" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<h2>Cronograma</h2>
+				<p>Em breve!</p>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Concurso Miss Filha de Jó -->
+	<section id="concurso" class="content-section text-center">
+		<div class="concurso">
+			<div class="container">
+				<h2>Concurso Miss Filha de Jó</h2>
+				<div class="col-md-6">
+					<p>O concurso Estadual se baseia no Concurso de Miss Filha de Jó Internacional, onde uma Filha de Jó é eleita através de provas e entrevistas, demonstrando plenos conhecimentos sobre Constituição, Estatuto e Ritual das Filhas de Jó Internacional.</p>
+					
+					<p>A Filha eleita ocupará o título de Miss Filha de Jó por um ano e, nesse tempo, auxiliará nos trabalhos da Ordem no Estado e na promoção de atividades que engrandeçam o trabalho das Filhas de Jó. Ela será a embaixadora da Ordem em nosso Estado!</p>
+					
+					<p>ESTE CONCURSO NÃO É DE BELEZA, E SIM DE CAPACIDADE E AMOR À ORDEM!</p>
+					
+					<p>A Filha de Jó que obtiver a segunda maior pontuação no Concurso ocupará o cargo de Miss Filha de Jó Simpatia e vai trabalhar em conjunto com a Miss Filha de Jó Jurisdicional por um período de um ano.</p>
+				</div>
+				
+				<div class="col-md-6">
+					<p>Formulário de inscrição para o concurso</p>
+					<p>Disponível para Filhas inscritas no VII COBEPI</p>
+					
+					<form class="form-horizontal" id="form-concurso">
+						<div class="form-group" id="form-success-concurso" style="display: none;">
+							<div class="col-sm-9 col-sm-offset-1 btn">
+								<label id="label-success-concurso"></label>
+							</div>
+						</div>
+					
+						<div class="form-group">
+							<label for="emailConcurso" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-9">
+								<div class="input-group">
+									<span class="input-group-addon">@</span>
+									<input type="email" class="form-control" id="emailConcurso" placeholder="E-mail">
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="senhaConcurso" class="col-sm-2 control-label">Senha</label>
+							<div class="col-sm-9">
+								<div class="input-group">
+									<span class="input-group-addon">*</span>
+									<input type="password" class="form-control" id="senhaConcurso" placeholder="********">
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<p><a class="edital_concurso" href="files/Edital_Concurso_Miss.pdf" target="_blank">Download</a> do edital do concurso.</p>
+						</div>
+						
+						<div class="checkbox">
+							<label><input type="checkbox" id="concordoConcurso"> Concordo com os termos e condições descritos no edital. <br /></label>
+						</div>
+						
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<button type="submit" class="btn btn-default" id="submitConcurso" disabled="true">Inscrever</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Hospedagem -->
+	<section id="hospedagem" class=" container content-section text-center">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<h2>Hospedagem</h2>
+				<p>Em breve!</p>
+			</div>
+		</div>
+	</section>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+	<!-- Contact Section -->
+	<section id="contato" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<h2>Entre em Contato</h2>
+				
+				<form class="form-horizontal" id="form-contato">
+					<div class="form-group">
+						<label for="nomeContato" class="col-sm-2 control-label">Nome</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="nomeContato" placeholder="Nome" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="assuntoContato" class="col-sm-2 control-label">Assunto</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="assuntoContato" placeholder="Assunto" required>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="foneContato" class="col-sm-2 control-label">Telefone</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+								<input type="tel" class="form-control bfh-phone" id="foneContato" placeholder="Telefone" required>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="emailContato" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-9">
+							<div class="input-group">
+								<span class="input-group-addon">@</span>
+								<input type="email" class="form-control" id="emailContato" placeholder="E-mail" required>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="mensagemContato" class="col-sm-2 control-label">Mensagem</label>
+						<div class="col-sm-9">
+							<textarea class="form-control" id="mensagemContato" rows="5" required></textarea>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-offset-1 col-sm-10">
+							<button type="reset" class="btn btn-default">Limpar</button>
+							<button type="submit" class="btn btn-default">Enviar</button>
+						</div>
+					</div>
+				</form>
+				
+				<ul class="list-inline banner-social-buttons">
+					<li>
+						<a href="https://www.facebook.com/VII-Cobepi-1543468332623454" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">VII COBEPI</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+	<!-- Map Section -->
+	<div id="map"></div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container text-center">
+			<p>Copyright &copy; Bethel #03 - Filhas de Antares - Teresina - Piauí<br />Ordem das Filhas de Jó Internacional</p>
+		</div>
+	</footer>
 
 </body>
 
 </html>
+
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<!-- jQuery -->
+<script src="js/jquery-1.12.3.min.js"></script>
+
+<!-- Masked Input -->
+<script src="js/jquery.maskedinput.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_0qE3_f0buqdD7Wdbgg2Glji-f7HFg2c"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/grayscale.min.js"></script>
